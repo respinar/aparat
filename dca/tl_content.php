@@ -8,7 +8,7 @@
  * @package   aparat
  * @author    Hamid Abbaszadeh
  * @license   GNU/GPL2
- * @copyright respinar 2014
+ * @copyright respinar 2014-2015
  */
 /**
  * Add palettes to tl_module

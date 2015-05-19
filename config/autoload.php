@@ -3,11 +3,12 @@
 /**
  * Contao Open Source CMS
  *
- * Copyright (c) 2005-2014 Leo Feyer
+ * Copyright (c) 2005-2015 Leo Feyer
  *
- * @package Aparat
- * @link    https://contao.org
- * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ * @package   aparat
+ * @author    Hamid Abbaszadeh
+ * @license   GNU/GPL2
+ * @copyright respinar 2014-2015
  */
 
 
