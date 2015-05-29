@@ -29,7 +29,7 @@
                 "": "system/modules/aparat"
             },
             "transifex": {
-                "project": "aparat",
+                "project": "contao-aparat",
                 "prefix": "master-",
                 "languages_cto": "languages",
                 "languages_tx": ".tx"
