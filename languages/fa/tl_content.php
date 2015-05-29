@@ -1,15 +1,17 @@
 <?php
-
 /**
- * Contao Open Source CMS
+ * Translations are managed using Transifex. To create a new translation
+ * or to help to maintain an existing one, please register at transifex.com.
  *
- * Copyright (c) 2005-2014 Leo Feyer
+ * @link http://help.transifex.com/intro/translating.html
+ * @link https://www.transifex.com/projects/p/contao-aparat/language/fa/
  *
- * @package   aparat
- * @author    Hamid Abbaszadeh
- * @license   GNU/GPL2
- * @copyright respinar 2014-2015
+ * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ *
+ * last-updated: 2015-05-10T10:50:15+04:30
  */
 
 
-$GLOBALS['TL_LANG']['tl_content']['aparat'] = array('شناسه آپارات','لطفا شناسه ویدیو آپارات را وارد نمایید (مثلا 5QCtF).');
+$GLOBALS['TL_LANG']['tl_content']['aparat']['0'] = 'شناسه آپارات';
+$GLOBALS['TL_LANG']['tl_content']['aparat']['1'] = 'لطفا شناسه ویدیو آپارات را وارد نمایید (مثلا 5QCtF).';
+
