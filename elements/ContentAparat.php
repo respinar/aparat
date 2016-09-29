@@ -60,37 +60,41 @@ class ContentAparat extends \ContentElement
 	protected function compile()
 	{
 
-		$this->Template->size = '';
-
-		// Set the size
-		if ($this->playerSize != '')
+		if($this->aparat_responsive)
 		{
-			$size = deserialize($this->playerSize);
-
-			if (is_array($size))
-			{
-				$this->Template->width = $size[0];
-			}
+			$this->Template->responsive = "&data[responsive]=yes";
 		}
+		else
+		{
+			if ($this->playerSize != '')
+			{
+				$size = deserialize($this->playerSize);
+
+				if (is_array($size)&&$size[0])				
+					$this->Template->width = "&width=".$size[0];				
+			}
+		}	
 
 		$this->Template->randdiv = ContentAparat::getRandomString();
 
-		$this->Template->href= "http://www.aparat.com/embed/".$this->aparat;
+		$this->Template->href= "https://www.aparat.com/embed/".$this->aparat;
 
 	}
 
-
-
-
+	/**
+	 * Generate random string for div class
+	 */
 	public function getRandomString($length = 8)
 	{
+
 		$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 		$string = '';
 
-		for ($i = 0; $i < $length; $i++) {
+		for ($i = 0; $i < $length; $i++) 
 			$string .= $characters[mt_rand(0, strlen($characters) - 1)];
-		}
+
 		return $string;
+		
 	}
 
 }
