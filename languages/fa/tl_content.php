@@ -14,4 +14,7 @@
 
 $GLOBALS['TL_LANG']['tl_content']['aparat']['0'] = 'شناسه آپارات';
 $GLOBALS['TL_LANG']['tl_content']['aparat']['1'] = 'لطفا شناسه ویدیو آپارات را وارد نمایید (مثلا 5QCtF).';
+$GLOBALS['TL_LANG']['tl_content']['aparat_responsive']['0'] = 'واکنش‌گرا';
+$GLOBALS['TL_LANG']['tl_content']['aparat_responsive']['1'] = 'اگر انتخاب شود اندازه واکنش‌گرا خواهد بود.';
+
 
