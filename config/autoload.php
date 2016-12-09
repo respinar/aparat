@@ -36,5 +36,7 @@ ClassLoader::addClasses(array
  */
 TemplateLoader::addFiles(array
 (
-	'ce_aparat' => 'system/modules/aparat/templates/elements',
+	'ce_aparat'     => 'system/modules/aparat/templates/elements',
+	'aparat_script' => 'system/modules/aparat/templates/aparat',
+	'aparat_iframe' => 'system/modules/aparat/templates/aparat',
 ));
