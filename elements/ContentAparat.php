@@ -41,7 +41,7 @@ class ContentAparat extends \ContentElement
 
 		if (TL_MODE == 'BE')
 		{
-			return '<p><a href="http://www.aparat.com/v/' . $this->aparat . '" target="_blank">http://www.aparat.com/v/' . $this->aparat . '</a></p>';
+			return '<p><a href="https://www.aparat.com/v/' . $this->aparat . '" target="_blank">https://www.aparat.com/v/' . $this->aparat . '</a></p>';
 		}
 
 		return parent::generate();
@@ -60,9 +60,11 @@ class ContentAparat extends \ContentElement
 	protected function compile()
 	{
 
+		$objTemplate = new \FrontendTemplate($this->aparat_template);
+
 		if($this->aparat_responsive)
 		{
-			$this->Template->responsive = "&data[responsive]=yes";
+			$objTemplate->responsive = true;
 		}
 		else
 		{
@@ -70,15 +72,20 @@ class ContentAparat extends \ContentElement
 			{
 				$size = deserialize($this->playerSize);
 
-				if (is_array($size)&&$size[0])				
-					$this->Template->width = "&width=".$size[0];				
+				if (is_array($size)&&$size[0])
+					$objTemplate->width = $size[0];
+
+				if (is_array($size)&&$size[1])
+					$objTemplate->height = $size[1];
+					
 			}
-		}	
+		}
 
-		$this->Template->randdiv = ContentAparat::getRandomString();
+		$objTemplate->randdiv = ContentAparat::getRandomString();
 
-		$this->Template->href= "https://www.aparat.com/embed/".$this->aparat;
+		$objTemplate->aparat_ID = $this->aparat;
 
+		$this->Template->video_code =  $objTemplate->parse();
 	}
 
 	/**

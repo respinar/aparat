@@ -1,0 +1,7 @@
+<div id="<?= $this->randdiv; ?>">
+    <?php if($this->responsive): ?>
+        <script type="text/JavaScript" src="https://www.aparat.com/embed/<?= $this->aparat_ID; ?>?data[rnddiv]=<?= $this->randdiv; ?>&data[responsive]=yes"></script>        
+    <?php else: ?>
+        <script type="text/JavaScript" src="https://www.aparat.com/embed/<?= $this->aparat_ID; ?>?data[rnddiv]=<?= $this->randdiv; ?><?php if($this->width) : ?>&data[w]=<?= $this->width; ?><?php endif; ?>"></script>
+    <?php endif; ?>
+</div>

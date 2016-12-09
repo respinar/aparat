@@ -2,8 +2,6 @@
 
 <?php $this->block('content'); ?>
 
-  <div id="<?= $this->randdiv; ?>">
-    <script type="text/JavaScript" src="<?= $this->href; ?>?data[rnddiv]=<?= $this->randdiv; ?><?= $this->width; ?><?= $this->responsive; ?>"></script>
-  </div>
+  <?= $this->video_code; ?>  
 
 <?php $this->endblock(); ?>

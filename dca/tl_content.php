@@ -14,7 +14,7 @@
  * Add palettes to tl_module
  */
 
-$GLOBALS['TL_DCA']['tl_content']['palettes']['aparat'] = '{type_legend},type,headline;{source_legend},aparat;{player_legend},aparat_responsive,playerSize;{template_legend:hide},customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['aparat'] = '{type_legend},type,headline;{source_legend},aparat;{player_legend},aparat_template,aparat_responsive,playerSize;{template_legend:hide},customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
 
 /**
  * Add fields to tl_module
@@ -32,6 +32,41 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['aparat_responsive'] = array
 	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['aparat_responsive'],
 	'exclude'                 => true,
 	'inputType'               => 'checkbox',
-	'eval'                    => array(),
+	'eval'                    => array('tl_class'=>'w50 m12'),
 	'sql'                     => "char(1) NOT NULL default ''"
 );
+$GLOBALS['TL_DCA']['tl_content']['fields']['aparat_template'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['aparat_template'],
+	'default'                 => 'aparat_script',
+	'exclude'                 => true,
+	'inputType'               => 'select',
+	'options_callback'        => array('tl_content_aparat', 'getAparatTemplates'),
+	'reference'               => &$GLOBALS['TL_LANG']['CTE'],
+	'eval'                    => array(),
+    'sql'                     => "varchar(64) NOT NULL default ''"
+);
+
+
+/**
+ * Class tl_content_aparat
+ *
+ * Provide miscellaneous methods that are used by the data configuration array.
+ * @copyright  Hamid Abbaszadeh 2014
+ * @author     Hamid Abbaszadeh <http://respinar.com>
+ * @package    Aparat
+ */
+class tl_content_aparat extends Backend
+{
+
+	/**
+	 * Return all aparat templates as array
+	 * @param object
+	 * @return array
+	 */
+	public function getAparatTemplates(DataContainer $dc)
+	{
+		return $this->getTemplateGroup('aparat_', $dc->activeRecord->pid);
+	}
+    
+}

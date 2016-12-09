@@ -17,3 +17,6 @@
  */
 
 $GLOBALS['TL_LANG']['CTE']['aparat'] = array ('Aparat','Adds a Aparat video.');
+
+$GLOBALS['TL_LANG']['CTE']['aparat_script']  = 'Script';
+$GLOBALS['TL_LANG']['CTE']['aparat_iframe']  = 'iFrame';
