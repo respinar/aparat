@@ -1,14 +1,12 @@
 <?php
 
 /**
- * Contao Open Source CMS
+ * aparat Extension for Contao Open Source CMS
  *
- * Copyright (c) 2005-2014 Leo Feyer
- *
- * @package   aparat
- * @author    Hamid Abbaszadeh
- * @license   GNU/GPL2
- * @copyright respinar 2014-2015
+ * @copyright  Copyright (c) 2014-2017, Respinar
+ * @author     Respinar <info@respinar.com>
+ * @license    https://opensource.org/licenses/lgpl-3.0.html LGPL
+ * @link       https://respinar.com/
  */
 
 
@@ -20,10 +18,6 @@ namespace aparat;
 
 /**
  * Class ContentAparat
- *
- * @copyright  respinar 2014
- * @author     Hamid Abbaszadeh
- * @package    Devtools
  */
 class ContentAparat extends \ContentElement
 {
@@ -77,7 +71,7 @@ class ContentAparat extends \ContentElement
 
 				if (is_array($size)&&$size[1])
 					$objTemplate->height = $size[1];
-					
+
 			}
 		}
 
@@ -97,11 +91,11 @@ class ContentAparat extends \ContentElement
 		$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 		$string = '';
 
-		for ($i = 0; $i < $length; $i++) 
+		for ($i = 0; $i < $length; $i++)
 			$string .= $characters[mt_rand(0, strlen($characters) - 1)];
 
 		return $string;
-		
+
 	}
 
 }

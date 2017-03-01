@@ -1,15 +1,14 @@
 <?php
 
 /**
- * Contao Open Source CMS
+ * aparat Extension for Contao Open Source CMS
  *
- * Copyright (c) 2005-2014 Leo Feyer
- *
- * @package   aparat
- * @author    Hamid Abbaszadeh
- * @license   GNU/GPL2
- * @copyright respinar 2014-2015
+ * @copyright  Copyright (c) 2014-2017, Respinar
+ * @author     Respinar <info@respinar.com>
+ * @license    https://opensource.org/licenses/lgpl-3.0.html LGPL
+ * @link       https://respinar.com/
  */
+
 /**
  * Add palettes to tl_module
  */
@@ -50,11 +49,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['aparat_template'] = array
 
 /**
  * Class tl_content_aparat
- *
- * Provide miscellaneous methods that are used by the data configuration array.
- * @copyright  Hamid Abbaszadeh 2014
- * @author     Hamid Abbaszadeh <http://respinar.com>
- * @package    Aparat
  */
 class tl_content_aparat extends Backend
 {
@@ -68,5 +62,5 @@ class tl_content_aparat extends Backend
 	{
 		return $this->getTemplateGroup('aparat_', $dc->activeRecord->pid);
 	}
-    
+
 }
