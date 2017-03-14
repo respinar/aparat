@@ -13,7 +13,7 @@
 /**
  * Namespace
  */
-namespace aparat;
+namespace Respinar\Aparat\Frontend\Elements;
 
 
 /**

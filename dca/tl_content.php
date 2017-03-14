@@ -55,12 +55,12 @@ class tl_content_aparat extends Backend
 
 	/**
 	 * Return all aparat templates as array
-	 * @param object
+	 *
 	 * @return array
 	 */
-	public function getAparatTemplates(DataContainer $dc)
+	public function getAparatTemplates()
 	{
-		return $this->getTemplateGroup('aparat_', $dc->activeRecord->pid);
+		return $this->getTemplateGroup('aparat_');
 	}
 
 }

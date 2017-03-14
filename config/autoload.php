@@ -11,22 +11,11 @@
 
 
 /**
- * Register the namespaces
+ * Register PSR-0 namespaces
  */
-ClassLoader::addNamespaces(array
-(
-	'aparat',
-));
-
-
-/**
- * Register the classes
- */
-ClassLoader::addClasses(array
-(
-	// Elements
-	'aparat\ContentAparat' => 'system/modules/aparat/elements/ContentAparat.php',
-));
+if (class_exists('NamespaceClassLoader')) {
+    NamespaceClassLoader::add('Respinar\Aparat', 'system/modules/aparat/library');
+}
 
 
 /**

@@ -14,6 +14,6 @@ array_insert($GLOBALS['TL_CTE'], 2, array
 (
 	'media' => array
 	(
-		'aparat'    => 'ContentAparat',
+		'aparat'    => 'Respinar\Aparat\Frontend\Elements\ContentAparat',
 	)
 ));
