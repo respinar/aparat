@@ -23,13 +23,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Respinar\\Aparat\\": "library/"
+            "Respinar\\Aparat\\": "src/library/"
         }
     },
     "extra":{
         "contao": {
             "sources": {
-                "": "system/modules/aparat"
+                "src": "system/modules/aparat"
             },
             "transifex": {
                 "project": "contao-aparat",
