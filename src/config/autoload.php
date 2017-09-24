@@ -11,14 +11,6 @@
 
 
 /**
- * Register PSR-0 namespaces
- */
-if (class_exists('NamespaceClassLoader')) {
-    NamespaceClassLoader::add('Respinar\Aparat', 'system/modules/aparat/library');
-}
-
-
-/**
  * Register the templates
  */
 TemplateLoader::addFiles(array
