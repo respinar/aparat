@@ -1,12 +1,11 @@
 <?php
 
-/**
- * aparat Extension for Contao Open Source CMS
+/*
+ * Aparat module for Contao Open Source CMS.
  *
  * @copyright  Copyright (c) 2014-2017, Respinar
- * @author     Respinar <info@respinar.com>
- * @license    https://opensource.org/licenses/lgpl-3.0.html LGPL
- * @link       https://respinar.com/
+ * @author     Hamid Abbaszadeh <https://respinar.com>
+ * @license    GNU/LGPL-3+
  */
 
 
